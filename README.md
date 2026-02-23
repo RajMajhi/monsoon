@@ -2,6 +2,12 @@
 
 # starts with creating an account in ECMWF 
 
+Download
+besure to download the latest versions you can download them using python package index 
+OpenSSl   pip install pyOpenSSL
+
+cdsapi    pip install cdsapi
+
 download datasets 
 link:-
 
