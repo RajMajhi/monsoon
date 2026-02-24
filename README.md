@@ -11,6 +11,8 @@ cdsapi    pip install cdsapi
 download datasets 
 link:-
 
+--------------------------------------
+
 before strating we need to install some libraries 
 
 using Anaconda bash 
@@ -21,7 +23,7 @@ conda install -c conda-forge xarray netcdf4 cartopy cdsapi scipy matplotlib pand
 using jupyter notebook
 !pip install xarray netCDF4 cartopy cdsapi scipy matplotlib pandas
 
-
+----------------------------------------
 We going to use 
 
 xarray
@@ -31,3 +33,5 @@ matplotlib
 cartopy
 scipy
 netCDF4
+
+
