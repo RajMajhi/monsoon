@@ -1,69 +1,91 @@
-🌧️ MONSOON – LPS Analysis Project
-starts with creating an account in ECMWF
+# 🌧️ MONSOON – LPS Analysis Project
 
-Before anything, create an account in ECMWF Climate Data Store (CDS).
+## starts with creating an account in ECMWF
 
-Go to: https://cds.climate.copernicus.eu
+Before anything, create an account in **ECMWF Climate Data Store (CDS)**.
 
-Register
+* Go to: [https://cds.climate.copernicus.eu](https://cds.climate.copernicus.eu)
+* Register
+* Generate your API key
+* Save the API key inside:
 
-Generate your API key
-
-Save the API key inside:
-
+```bash
 ~/.cdsapirc
+```
 
 Example:
 
+```text
 url: https://cds.climate.copernicus.eu/api/v2
 key: <your_uid>:<your_api_key>
-Download
+```
+
+---
+
+# Download
 
 besure to download the latest versions you can download them using python package index
 
-Install OpenSSL
+### Install OpenSSL
+
+```bash
 pip install pyOpenSSL
-Install cdsapi
+```
+
+### Install cdsapi
+
+```bash
 pip install cdsapi
-before strating we need to install some libraries
+```
+
+---
+
+# before strating we need to install some libraries
 
 We will create a clean environment for the project.
 
-using Anaconda bash
+## using Anaconda bash
+
+```bash
 conda create -n lps_env python=3.10
 conda activate lps_env
 conda install -c conda-forge xarray netcdf4 cartopy cdsapi scipy matplotlib pandas
-using jupyter notebook
+```
+
+---
+
+## using jupyter notebook
 
 If working inside notebook:
 
+```python
 !pip install xarray netCDF4 cartopy cdsapi scipy matplotlib pandas
-We going to use
+```
+
+---
+
+# We going to use
 
 These libraries will be used for monsoon and LPS analysis:
 
-xarray → handling multi-dimensional climate datasets
+* **xarray** → handling multi-dimensional climate datasets
+* **numpy** → numerical computation
+* **pandas** → time-series handling
+* **matplotlib** → plotting graphs
+* **cartopy** → plotting maps
+* **scipy** → scientific calculations
+* **netCDF4** → reading ERA5 data
+* **cdsapi** → downloading ECMWF datasets
 
-numpy → numerical computation
+---
 
-pandas → time-series handling
-
-matplotlib → plotting graphs
-
-cartopy → plotting maps
-
-scipy → scientific calculations
-
-netCDF4 → reading ERA5 data
-
-cdsapi → downloading ECMWF datasets
-
-download datasets
+# download datasets
 
 We will download ERA5 datasets from ECMWF.
 
 Example script:
 
+```python
 import cdsapi
 
 c = cdsapi.Client()
@@ -85,7 +107,13 @@ c.retrieve(
     },
     'era5_lps_data.nc'
 )
-Flow of the Project
+```
+
+---
+
+# Flow of the Project
+
+```
 Create ECMWF Account
         ↓
 Setup API Key
@@ -101,12 +129,15 @@ Load Data using Xarray
 Visualize using Cartopy
         ↓
 Analyze Monsoon Low Pressure Systems (LPS)
-Goal
+```
 
-Study monsoon circulation
+---
 
-Analyze 850 hPa wind fields
+# Goal
 
-Identify Low Pressure Systems (LPS)
+* Study monsoon circulation
+* Analyze 850 hPa wind fields
+* Identify Low Pressure Systems (LPS)
+* Perform spatial-temporal analysis
 
-Perform spatial-temporal analysis
+---
