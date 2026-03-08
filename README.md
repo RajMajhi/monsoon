@@ -17,7 +17,7 @@ Example:
 
 ```text
 url: https://cds.climate.copernicus.eu/api/v2
-key: <your_uid>:<your_api_key>
+key: <your_api_key>
 ```
 
 ---
